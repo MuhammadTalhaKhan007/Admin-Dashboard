@@ -1,0 +1,526 @@
+/* DashBoard CSS start from here */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    min-height: 100vh;
+    font-family: 'Lobster', sans-serif;
+}
+a {
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
+h1,
+h2 {
+    color: #444;
+    font-family: 'Comfortaa', sans-serif;
+    
+}
+h3 {
+    color: #999;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 15px 10px;
+    border-bottom: 2px solid #999;
+}
+
+.side-menu {
+    position: fixed;
+    background: #575656;
+    width: 20vw;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.side-menu .brand-name {
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: .5px solid gray;
+}
+.brand-name h1{
+color: white;
+font-size: 24px;
+}
+.side-menu li {
+    font-size: 24px;
+    padding: 10px 40px;
+    color: rgb(155, 155, 155);
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    background-color: #575656;
+    margin: 10px 0px 10px 0px;
+}
+.side-menu li:hover {
+    background: white;
+    color: #444;
+}
+.container {
+    position: absolute;
+    right: 0;
+    width: 80% !important;
+    height: 100vh;
+    background: #f1f1f1;
+}
+.container .header {
+    padding: 20px;
+    height: 10vh;
+    background: #727272;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    font-family: 'Lobster', sans-serif;
+}
+.header h1{
+    font-family: 'Great Vibes', 'cursive';
+    color: #444;
+    font-weight: 900;
+    font-size: 56px;
+}
+.container .content {
+    margin-top: 3vh;
+    min-height: 90vh;
+    background: #f1f1f1;
+}
+.container .content .cards {
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+/* RishtSide DashBoard  CSS end  here */
+
+ .MainContainer{
+    width: 100%;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    transition: transform 0.3s ease;
+}
+#Create:hover{
+    transform: none;
+}
+.MainContainer:hover {
+    transform: scale(1.01); /* Zoom out effect on hover */
+}
+.MainTab{
+    display: flex;
+    width: -webkit-fill-available;
+    padding: 15px ;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: stretch;
+    border-radius: 6px;
+    background: #838383;
+}
+.Tabs{
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+    gap: 10px;
+}
+.Tabs h4{
+    color: #0c0c0c;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+}
+ul li{
+    display: flex;
+    padding: 10px 32px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 4px;
+    background: #FFF;
+    cursor: pointer;
+}
+.ListTab{
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: stretch;
+    border-radius: 6px;
+    background: #afaeae;
+}
+button{
+    padding: 10px 32px;
+    font-size: 18px;
+    border-radius: 6px ;
+    border-style: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+.TourTitle{
+    width: 65%; 
+    display: flex;
+    padding: 15px ;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+    border-radius: 4px;
+}
+.TourButton{
+    width: 30%; 
+     display: flex;
+    padding: 10px 32px;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+    border-radius: 4px;
+
+}
+#FormSubmitButton, #CreateButton, #UpdateSubmitButton{
+    background-color: rgb(73, 173, 90);
+    color: white;
+    font-family: 'Comfortaa', sans-serif;
+}
+#CreateButton:hover, #FormSubmitButton:hover{
+    background-color: rgb(45, 194, 95);
+    color: white;
+}
+#UpdateButton{
+    background-color: rgb(73, 73, 173);
+    color: white;
+    font-family: 'Comfortaa', sans-serif;
+}
+#UpdateButton:hover{
+    background-color: rgb(45, 45, 194);
+    color: white;
+}
+#DeleteButton{
+    background-color: rgb(202, 75, 75);
+    color: white;
+    font-family: 'Comfortaa', sans-serif;
+}
+#DeleteButton:hover{
+    background-color: rgb(192, 39, 39);
+    color: white;
+}
+/* Css for form */
+#myForm {
+    border-radius: 20px;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    width: 40%; 
+    max-height: 100%;
+    box-sizing: border-box; 
+    margin: 0 auto;
+    overflow: auto;
+
+}
+/* Css for form */
+#myUpdateForm {
+    border-radius: 20px;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    width: 40%; 
+    max-height: 100%;
+    box-sizing: border-box; 
+    margin: 0 auto;
+    overflow: auto;
+
+}
+#price3{
+    align-items: center;
+}
+.formDiv{
+    display: flex;
+    justify-content: space-between;
+}
+.Div1, .Div2{
+    width: 45%;
+}
+.closeButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+#imagePreview {
+    width: 150px; /* Set the width as per your requirement */
+    height: 120px; /* Set the height as per your requirement */
+    margin-bottom: 10px;
+}
+
+#imagePreview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
+}
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    margin: 0 auto;
+    overflow: auto;
+}
+form h4{
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: rgb(77, 77, 77);
+}
+label {
+    color: gray;
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.duration{
+    color: black;
+
+}
+
+input,
+select {
+    border: 0.5px solid #ecf0f3;
+    margin-bottom: 10px;
+    width: 100%;
+    background: #ecf0f3;
+    padding: 10px;
+    padding-left: 20px;
+    height: 40px;
+    font-size: 18px;
+    border-radius: 30px;
+    box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
+}
+.automaticprice{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+textarea{
+    max-width: 100%;
+    max-height: 100px;
+    border: 0.5px solid gray;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 18px;
+}
+#image{
+    background: none;
+    box-shadow: none;
+    border: none;
+    border-radius: 0px;
+    padding: 15px 0px ;
+}
+.DivForImage{
+    display: flex;
+}
+
+#Mobile-Menu{
+    display: none;
+}
+#menu-close {
+    display: none; /* Hide the close button by default */
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+}
+#side-menu {
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    display: block;
+    transition: transform 0.3s ease;
+    transform: translateX(0);
+}
+.side-menu-title{
+    background-color: #8d8b8b;
+    padding: 10px;
+}
+.side-menu-title li.active {
+    background-color: white;
+    color: #444;
+}
+
+@media screen and (max-width: 1024px) {
+    .brand-name h1{
+        font-size: 18px;
+    }
+    .side-menu li {
+        font-size: 18px;
+    }
+    ul li{
+        padding: 8px;
+    }
+    button{
+        padding: 8px 15px;
+    }
+}
+@media screen and (max-width: 940px) {
+    button{
+        font-size: 16px;
+    }
+    .side-menu li span {
+        display: none;
+    }
+     .brand-name{
+        padding: 15px;
+    }
+    .side-menu {
+        align-items: center;
+    }
+    .side-menu li img {
+        width: 40px;
+        height: 40px;
+    }
+    .side-menu li:hover {
+        /* background: #f05462; */
+        padding: 8px 38px;
+        border: 2px solid white;
+        
+    }
+    .TourTitle{
+        font-size: 16px;
+        padding: 10px;
+        width: 60%;
+    }
+}
+@media screen and (max-width: 768px) {
+    #side-menu {
+        width: 50%;
+        transform: translateX(-384px); /* Hide the side menu off-screen */
+    }
+    #Mobile-Menu{
+        display: flex;
+        justify-content: end;
+    }
+    #Dashboardcontainer{
+        width: 100% !important;
+    }
+    .MainContainer{
+        padding: 20px;
+        
+    }
+    .MainTab{
+        padding: 10px;
+        
+    }
+    .Tabs{
+        display: block;
+       
+    }
+    .Tabs li{
+        justify-content: start;
+        margin: 8px 0px 8px 0px;
+    }
+    .TourTitle, .TourButton{
+        width: 100%;
+        justify-content: start;
+        padding: 10px;
+        
+    }
+    .side-menu li{
+        padding:  20px;
+    }
+    #side-menu.show-menu #menu-close {
+        display: block;
+    }
+    .container {
+        display: block;
+        flex-direction: column;
+        height: 100vh;   
+    }
+    header {
+        background-color: #444;
+        color: white;
+        padding: 10px;   
+    }
+    .header h1{
+        font-size: 36px;
+    }
+    main {
+        flex-grow: 1;
+        padding: 20px;
+    }
+    .container .content{
+        position: static;
+    }
+    #menu-toggle {
+        display: none; /* Hide the button by default */
+    }
+    #menu-toggle {
+        display: block;
+        background: none;
+        font-size: 36px;
+        color: white;
+    }
+}
+
+
+@media screen and (max-width:536px) {
+
+    .brand-name h1, .Tabs h4 {
+        font-size: 16px;
+    }
+    .container .content .cards {
+        justify-content: center;
+    }
+    .side-menu li img {
+        width: 30px;
+        height: 30px;
+    }
+    .TourTitle h2{
+        font-size: 16px;
+    }
+    button{
+        font-size: 16px;
+    }
+
+}
+@media screen and (max-width:425px) {
+   #myUpdateForm, #myForm{
+        width: 300px;
+    }
+    form{
+        width: 300px;
+    }
+    .CarCompanyTitle{
+        width: 100%;
+    }
+}
+
+
